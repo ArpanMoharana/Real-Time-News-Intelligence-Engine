@@ -180,7 +180,7 @@ The development team is currently focusing on:
 - Optimizing memory usage and processing efficiency
 
 ### Known Issues
-- System crashes when processing more than X articles simultaneously (investigating)
+- System performance degrades significantly with datasets larger than 100 articles (investigating scalability bottlenecks)
 - Memory leaks in long-running analysis sessions (under investigation)
 - API rate limiting not yet implemented
 - Error handling needs improvement for edge cases
