@@ -8,7 +8,13 @@
 
 ## 📋 Overview
 
-The **Real-Time News Intelligence Engine** is an AI-powered system designed to analyze, verify, and extract insights from news articles and claims in real-time. The engine aims to provide intelligent fact-checking, sentiment analysis, and trend detection capabilities for journalists, researchers, and content creators.
+The **Real-Time News Intelligence Engine** is an AI-powered system designed to analyze, verify, and extract insights from news articles and claims in real-time. The engine leverages **RAG (Retrieval-Augmented Generation)** architecture combining retrieval, evidence gathering, and LLM verification to provide intelligent fact-checking, sentiment analysis, and trend detection capabilities for journalists, researchers, and content creators.
+
+### Core Technology
+The system implements a **RAG-based approach** that goes beyond simple classification:
+- **Retrieval**: Efficiently fetches relevant articles and supporting evidence from knowledge bases
+- **Evidence Gathering**: Collects and consolidates supporting information from multiple sources
+- **LLM Verification**: Uses large language models to verify claims and generate insights
 
 ## 🎯 Project Status
 
@@ -24,8 +30,11 @@ The **Real-Time News Intelligence Engine** is an AI-powered system designed to a
 - **Scalability**: Architecture needs optimization for production-level workloads
 
 ### Under Development 🚧
+- **RAG Pipeline Implementation**: Building the complete retrieval-evidence-verification workflow
 - Distributed processing architecture for handling large-scale data
 - Real-time data ingestion from multiple news sources
+- Vector database integration for efficient similarity search and retrieval
+- LLM integration for advanced claim verification and analysis
 - Performance optimization for big data workloads
 - Streaming analytics capabilities
 - Enhanced caching and indexing strategies
@@ -44,6 +53,8 @@ The **Real-Time News Intelligence Engine** is an AI-powered system designed to a
 
 ## 🏗️ Architecture (Planned)
 
+The system follows a **RAG-based architecture** to transform raw news data into verified intelligence:
+
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │                    Data Ingestion Layer                      │
@@ -56,13 +67,18 @@ The **Real-Time News Intelligence Engine** is an AI-powered system designed to a
 └─────────────────────┬───────────────────────────────────────┘
                       │
 ┌─────────────────────▼───────────────────────────────────────┐
-│                  Processing Engine                           │
-│  (NLP, ML Models, Fact-Checking, Analysis)                   │
+│            RAG-Based Processing Engine                       │
+│  ┌────────────────────────────────────────────────────┐     │
+│  │  1. Retrieval: Fetch relevant evidence & context   │     │
+│  │  2. Evidence Gathering: Consolidate information    │     │
+│  │  3. LLM Verification: Verify claims & insights     │     │
+│  └────────────────────────────────────────────────────┘     │
+│         (Vector DB, NLP, LLMs, Knowledge Bases)             │
 └─────────────────────┬───────────────────────────────────────┘
                       │
 ┌─────────────────────▼───────────────────────────────────────┐
-│               Storage & Indexing Layer                       │
-│         (Database, Search Engine, Cache)                     │
+│          Storage & Indexing Layer                            │
+│    (Database, Vector Store, Search Engine, Cache)           │
 └─────────────────────┬───────────────────────────────────────┘
                       │
 ┌─────────────────────▼───────────────────────────────────────┐
