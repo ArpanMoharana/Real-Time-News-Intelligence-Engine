@@ -189,7 +189,7 @@ Please ensure your code:
 ## 📝 Development Notes
 
 ### Current Focus
-The development team is currently focusing on:
+I am currently focusing on:
 - Resolving performance bottlenecks with large datasets
 - Implementing distributed processing capabilities
 - Building a robust real-time data ingestion pipeline
